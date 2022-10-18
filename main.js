@@ -60,22 +60,20 @@ function showOnScreen(user) {
     const parentNode = document.getElementById('usersList');
     const childHTML = `<li id= ${user._id}> ${user.name} : ${user.email} : ${user.number} 
                           <button onclick = deleteUser('${user._id}')> Delete </button>
-                          <button onclick = editUser('${user.name}','${user.email}','${user.number}')> Edit </button>
+                          <button onclick = editUser('${user.name}','${user.email}','${user.number}','${user._id}')> Edit </button>
                       </li>`
 
     parentNode.innerHTML = parentNode.innerHTML + childHTML;
 
 }
 // Edit user
-function editUser(name, emailId, number) {
-    console.log({ emailId, name, number })
+function editUser(name, emailId, number, userId) {
 
     document.getElementById('name').value = name;
     document.getElementById('email').value = emailId;
     document.getElementById('phone').value = number;
 
-    deleteUser(emailId);
-
+    deleteUser(userId);
 }
 
 // delete usesr
@@ -87,11 +85,6 @@ function deleteUser(userId) {
             removeFromScreen(userId);
         })
         .catch(err => console.error(err));
-    // localStorage.removeItem(userId);
-
-    // console.log('delete user clicked');
-
-    // removeFromScreen(emailId);
 
 }
 
