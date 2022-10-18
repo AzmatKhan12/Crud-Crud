@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Get Appointment</h1>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <form id="my-form">
+                <div class="users_name">
+                    <label for="name"> Name</label>
+                    <input type="text" placeholder="abc" id="name">
+                </div>
+                <div class="user_mail">
+                    <label for="emailId">emailId</label>
+                    <input type="text" placeholder="abc@mail.com" id="email" required>
+                </div>
+                <div class="user_phone">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="text" placeholder="+91" id="phone">
+                </div>
+                <!-- <div class="date">
+                    <label for="Date">Date</label>
+                    <input type="date" id="date">
+                </div> -->
+                <input class="button" type="submit" value="Submit">
+            </form>
+            <div>
+                <ul id="usersList"></ul>
+            </div>
+
+        </section>
+        <footer></footer>
+    </main>
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</body>
+
+</html>
